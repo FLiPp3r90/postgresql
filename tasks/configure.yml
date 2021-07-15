@@ -226,5 +226,5 @@
 - name: PostgreSQL | Restart on systemd change
   service:
     name: "{{ postgresql_service_name }}"
-    state: reloaded
+    state: restarted
   when: postgresql_systemd_custom_conf.changed
